@@ -10,7 +10,7 @@ CONFIG += c++11
 # any Qt feature that has been marked deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
 # deprecated API in order to know how to port your code away from it.
-DEFINES += QT_DEPRECATED_WARNINGS
+DEFINES += QT_DEPRECATED_WARNINGS HAVE_CONFIG_H
 
 # You can also make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -19,10 +19,31 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     src/main.cpp \
-    src/mainwindow.cpp 
+    src/mainwindow.cpp \
+    qrencode/bitstream.c \
+    qrencode/mask.c \
+    qrencode/mmask.c \
+    qrencode/mqrspec.c \
+    qrencode/qrencode.c \
+    qrencode/qrinput.c \
+    qrencode/qrspec.c \
+    qrencode/rsecc.c \
+    qrencode/split.c
+
 
 HEADERS += \
-    inc/mainwindow.h 
+    inc/mainwindow.h \
+    qrencode/bitstream.h \
+    qrencode/mask.h \
+    qrencode/mmask. h \
+    qrencode/mqrspec.h \
+    qrencode/qrencode.h \
+    qrencode/qrencode_inner.h \
+    qrencode/qrinput.h \
+    qrencode/qrspec.h \
+    qrencode/rsecc.h \
+    qrencode/split.h
+
 
 FORMS += \
     forms/mainwindow.ui 

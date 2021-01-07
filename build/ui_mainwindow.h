@@ -10,12 +10,14 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
+#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
@@ -29,6 +31,7 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
+    QAction *actionsave;
     QWidget *centralwidget;
     QGridLayout *gridLayout;
     QSplitter *splitter;
@@ -40,6 +43,7 @@ public:
     QPushButton *pushButtonGenerate;
     QLabel *QRLabel;
     QMenuBar *menubar;
+    QMenu *menufile;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -47,6 +51,8 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->resize(800, 600);
+        actionsave = new QAction(MainWindow);
+        actionsave->setObjectName(QString::fromUtf8("actionsave"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         gridLayout = new QGridLayout(centralwidget);
@@ -91,10 +97,15 @@ public:
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
         menubar->setGeometry(QRect(0, 0, 800, 23));
+        menufile = new QMenu(menubar);
+        menufile->setObjectName(QString::fromUtf8("menufile"));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
         MainWindow->setStatusBar(statusbar);
+
+        menubar->addAction(menufile->menuAction());
+        menufile->addAction(actionsave);
 
         retranslateUi(MainWindow);
 
@@ -104,8 +115,10 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        actionsave->setText(QCoreApplication::translate("MainWindow", "save", nullptr));
         pushButtonGenerate->setText(QCoreApplication::translate("MainWindow", "\347\224\237\346\210\220", nullptr));
         QRLabel->setText(QCoreApplication::translate("MainWindow", "\350\276\223\345\205\245\346\226\207\345\255\227\344\273\245\347\224\237\346\210\220\344\272\214\347\273\264\347\240\201", nullptr));
+        menufile->setTitle(QCoreApplication::translate("MainWindow", "file", nullptr));
     } // retranslateUi
 
 };

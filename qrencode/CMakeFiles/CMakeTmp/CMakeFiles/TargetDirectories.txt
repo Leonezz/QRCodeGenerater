@@ -1,0 +1,2 @@
+D:/intrlligentAshbin/QRCodeGenerater/qrencode/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_57f17.dir
+D:/intrlligentAshbin/QRCodeGenerater/qrencode/CMakeFiles/CMakeTmp/CMakeFiles/ALL_BUILD.dir
