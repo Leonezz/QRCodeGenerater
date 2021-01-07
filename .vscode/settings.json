@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.m": "matlab",
+        "*.tex": "latex",
+        "qserialportinfo": "cpp",
+        "thread": "cpp"
+    }
+}
