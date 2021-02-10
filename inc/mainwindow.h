@@ -6,6 +6,9 @@
 #include <QPainter>
 #include <QLabel>
 #include <QFileDialog>
+#include <QJsonObject>
+#include <QJsonDocument>
+#include <QJsonArray>
 #include "qrencode/qrencode.h"
 QT_BEGIN_NAMESPACE
 namespace Ui
@@ -25,14 +28,16 @@ public:
 private slots:
     void onGeneratePushButtonClicked();
     void onSaveActionTriggered();
+
 private:
-    void encode(const QString& msg);
-    void saveQRImageToLocal(const QString& fileName);
+    void encode(const QString &msg);
+    void saveQRImageToLocal(const QString &fileName);
+    void generateQRCodesFromDataBase();
 private:
     QImage qrCodeImage;
     Ui::MainWindow *ui;
     int qrBorder = 50;
     int qrWidth = 400;
-    QLabel* statusLabel;
+    QLabel *statusLabel;
 };
 #endif // MAINWINDOW_H

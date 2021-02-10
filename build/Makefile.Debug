@@ -354,6 +354,18 @@ debug\moc_mainwindow.cpp: ..\inc\mainwindow.h \
 		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qdir.h \
 		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qfileinfo.h \
 		C:\Qt\5.15.0\msvc2019_64\include\QtWidgets\qdialog.h \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\QJsonObject \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qjsonobject.h \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qjsonvalue.h \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qcborvalue.h \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qdatetime.h \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qcborcommon.h \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qregularexpression.h \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\quuid.h \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\QJsonDocument \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qjsondocument.h \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\QJsonArray \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qjsonarray.h \
 		..\qrencode\qrencode.h \
 		debug\moc_predefs.h \
 		C:\Qt\5.15.0\msvc2019_64\bin\moc.exe
@@ -502,6 +514,18 @@ debug\main.obj: ..\src\main.cpp ..\inc\mainwindow.h \
 		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qdir.h \
 		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qfileinfo.h \
 		C:\Qt\5.15.0\msvc2019_64\include\QtWidgets\qdialog.h \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\QJsonObject \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qjsonobject.h \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qjsonvalue.h \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qcborvalue.h \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qdatetime.h \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qcborcommon.h \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qregularexpression.h \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\quuid.h \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\QJsonDocument \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qjsondocument.h \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\QJsonArray \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qjsonarray.h \
 		..\qrencode\qrencode.h \
 		C:\Qt\5.15.0\msvc2019_64\include\QtWidgets\QApplication \
 		C:\Qt\5.15.0\msvc2019_64\include\QtWidgets\qapplication.h \
@@ -631,6 +655,18 @@ debug\mainwindow.obj: ..\src\mainwindow.cpp ..\inc\mainwindow.h \
 		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qdir.h \
 		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qfileinfo.h \
 		C:\Qt\5.15.0\msvc2019_64\include\QtWidgets\qdialog.h \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\QJsonObject \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qjsonobject.h \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qjsonvalue.h \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qcborvalue.h \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qdatetime.h \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qcborcommon.h \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qregularexpression.h \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\quuid.h \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\QJsonDocument \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qjsondocument.h \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\QJsonArray \
+		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qjsonarray.h \
 		..\qrencode\qrencode.h \
 		ui_mainwindow.h \
 		C:\Qt\5.15.0\msvc2019_64\include\QtCore\QVariant \
@@ -650,7 +686,6 @@ debug\mainwindow.obj: ..\src\mainwindow.cpp ..\inc\mainwindow.h \
 		C:\Qt\5.15.0\msvc2019_64\include\QtWidgets\qstyleoption.h \
 		C:\Qt\5.15.0\msvc2019_64\include\QtWidgets\qabstractspinbox.h \
 		C:\Qt\5.15.0\msvc2019_64\include\QtGui\qvalidator.h \
-		C:\Qt\5.15.0\msvc2019_64\include\QtCore\qregularexpression.h \
 		C:\Qt\5.15.0\msvc2019_64\include\QtWidgets\qslider.h \
 		C:\Qt\5.15.0\msvc2019_64\include\QtWidgets\qabstractslider.h \
 		C:\Qt\5.15.0\msvc2019_64\include\QtWidgets\qstyle.h \

@@ -9,6 +9,8 @@ MainWindow::MainWindow(QWidget *parent)
     this->setWindowTitle(tr("QRCode Generater"));
     this->statusBar()->addWidget(this->statusLabel);
 
+    this->ui->comboBox->addItems({"正常模式", "自动模式"});
+
     connect(ui->pushButtonGenerate, &QPushButton::clicked,
             this, &MainWindow::onGeneratePushButtonClicked);
     connect(ui->actionsave, &QAction::triggered, this, &MainWindow::onSaveActionTriggered);
@@ -54,16 +56,47 @@ void MainWindow::saveQRImageToLocal(const QString &fileName)
     this->qrCodeImage.save(fileName, "png");
 }
 
-void MainWindow::onGeneratePushButtonClicked()
+void MainWindow::generateQRCodesFromDataBase()
 {
-    const QString msg = ui->TextEdit->toPlainText();
-    if (msg.isEmpty())
+    QFile dataBaseJsonFile("./json/database.json");
+    if (!dataBaseJsonFile.open(QIODevice::ReadOnly))
     {
-        this->statusLabel->setText(tr("Error: input text before generating."));
+        this->statusLabel->setText("Error: database file open failed.");
         return;
     }
-    encode(msg);
-    this->ui->QRLabel->setPixmap(QPixmap::fromImage(qrCodeImage));
+    QByteArray jsonBytes = dataBaseJsonFile.readAll();
+    dataBaseJsonFile.close();
+    QJsonDocument jsonDoc = QJsonDocument::fromJson(jsonBytes);
+    QJsonObject jsonObj = jsonDoc.object();
+    QJsonArray jsonArr = jsonObj.value("database").toArray();
+    QString id;
+    const QString imgDir = "./imgs/";
+    for (auto &&obj : jsonArr)
+    {
+        id = obj.toObject().value("id").toString();
+        encode(id);
+        saveQRImageToLocal(imgDir + id);
+    }
+}
+
+void MainWindow::onGeneratePushButtonClicked()
+{
+    if (this->ui->comboBox->currentIndex() == 0)
+    {
+        const QString msg = ui->TextEdit->toPlainText();
+        if (msg.isEmpty())
+        {
+            this->statusLabel->setText(tr("Error: input text before generating."));
+            return;
+        }
+        encode(msg);
+        this->ui->QRLabel->setPixmap(QPixmap::fromImage(qrCodeImage));
+    }
+    else
+    {
+        generateQRCodesFromDataBase();
+    }
+    
 }
 
 MainWindow::~MainWindow()
